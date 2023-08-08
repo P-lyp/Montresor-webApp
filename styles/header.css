@@ -1,0 +1,15 @@
+.container__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--cor-principal);
+    height: 8vh;
+    align-items: center;
+    padding: 0 5% 0 2%;
+}
+
+.texto__logo {
+    margin-top: 4%;
+    font-family: var(--fonte-logo);
+    font-size: 48px;
+}
