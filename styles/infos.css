@@ -3,11 +3,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 40%;
+    padding: 1%;
 }
 
 .container__pedidos {
     margin-top: 4vh;
-    margin-bottom: 8vh;
+    margin-bottom: 10%;
 }
 
 .container__valores {
