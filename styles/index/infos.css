@@ -1,48 +1,62 @@
 .secao__infos {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    height: 40%;
     padding: 1%;
+    height: 45%;
 }
 
 .container__pedidos {
-    margin-top: 4vh;
+    margin-top: 5%;
     margin-bottom: 10%;
 }
 
 .container__valores {
     display: flex;
     flex-direction: row;
+    height: 70%;
+}
+
+.container__texto {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    height: 60%;
 }
 
 .sub__container {
-    width: 49vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .num__pedidos {
-    margin-top: 4vh;
-    font-size: 35px;
+    margin-top: 5%;
+    font-size: 2.1rem;
     font-weight: 500;
 }
 
 .texto__info {
-    font-size: 30px;
+    font-size: 1.8rem;
     padding: 0 8vw;
 }
 
-.divisoria__linha {
+.container__divisoria__linha {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.divisoria__linha {
+    height: 90%;
+}
+
+.container__valor__info {
+    display: flex;
+}
+
 .valor__info {
-    margin-top: 10%;
-    font-size: 28px;
+    font-size: 1.75rem;
     color: white;
     font-weight: 500;
 }

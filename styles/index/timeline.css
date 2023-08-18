@@ -1,38 +1,48 @@
 .secao__timeline {
-    margin-top: 8vh;
-    height: 32vh;
+    margin-top: 10%;
+}
+
+.container__icone-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .card__timeline {
     display: flex;
-    flex-direction: row;
     background-color: var(--cor-terciaria);
     margin: 5vw 2vw;
     padding: 2% 4%;
     border-radius: 16px;
+    height: 6vh;
     justify-content: space-between;
     align-items: center;
-    height: 6vh;
 }
 
 .icone__timeline {
-    width: 10vw;
+    width: 9vw;
 }
 
 .card__titulo {
-    font-size: 18px;
+    font-size: 5vw;
     font-weight: 500;
     text-align: left;
+    width: 45vw;
+}
+
+.container__preco-loja {
+    display: block;
+    text-align: right;
 }
 
 .card__preco {
-    font-size: 16px;
+    font-size: 4vw;
 }
 
 .card__loja-data {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--cor-secundaria-fonte);
-    text-align: end;
+    text-align: right;
 }
 
 .icone__mais {
@@ -50,4 +60,8 @@
     background: transparent;
     border: none;
     padding: 0;
+}
+
+.container__card__icone {
+    margin-right: 5%;
 }

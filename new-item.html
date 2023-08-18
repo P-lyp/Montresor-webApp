@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>MonTresor</title>
         <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/new-item/main.css" />
     </head>
     <body>
         <header class="container__header">
@@ -34,6 +35,34 @@
         </header>
 
         <!-- CRIAR FORM DE CADASTRO DE PRODUTOS -->
+
+        <div class="container__formulario">
+            <form>
+                <div class="container__campo__formulario">
+                    <label for="nome">Nome do Item:</label>
+                    <input type="text" name="nome" required />
+                </div>
+
+                <div class="container__campo__formulario">
+                    <label for="custo">Custo Total:</label>
+                    <input type="number" name="custo" required />
+                </div>
+
+                <div class="container__campo__formulario">
+                    <label for="loja">Loja da Compra:</label>
+                    <input type="text" name="loja" required />
+                </div>
+
+                <div class="container__campo__formulario">
+                    <label for="data">Data da Compra:</label>
+                    <input type="date" name="data" required />
+                </div>
+
+                <div class="container__campo__formulario">
+                    <button type="submit">Cadastrar Compra</button>
+                </div>
+            </form>
+        </div>
 
         <script src="./scripts/main.js"></script>
     </body>

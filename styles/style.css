@@ -1,7 +1,7 @@
 @import url(./reset.css);
 @import url(./header.css);
-@import url(./infos.css);
-@import url(./timeline.css);
+@import url(./index/infos.css);
+@import url(./index/timeline.css);
 @import url("https://fonts.googleapis.com/css2?family=Licorice&family=Montserrat:wght@200;500&display=swap");
 
 :root {
@@ -21,4 +21,5 @@ body {
     color: white;
     font-family: var(--fonte-principal);
     font-weight: 200;
+    height: 100vh;
 }
