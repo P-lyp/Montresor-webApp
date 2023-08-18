@@ -45,3 +45,9 @@
     justify-content: center;
     padding: 2%;
 }
+
+.btn__icone__mais {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
