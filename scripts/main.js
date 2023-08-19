@@ -14,7 +14,10 @@ menuIcone.onclick = function () {
 //redirecionar para pag principal ao apertar na logo
 var botaoLogo = document.getElementById("botao-logo");
 
-botaoLogo.addEventListener("click", () => (window.location.href = "./index.html") )
+botaoLogo.addEventListener(
+    "click",
+    () => (window.location.href = "./index.html")
+);
 
 //redirecionar botao + para outra pagina
 var botaoNovoItem = document.getElementById("botaoNovoItem");

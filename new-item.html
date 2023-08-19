@@ -37,31 +37,36 @@
         <!-- CRIAR FORM DE CADASTRO DE PRODUTOS -->
 
         <div class="container__formulario">
-            <form>
+            <form id="form">
                 <h2 class="cadastro__titulo">Cadastro de gasto</h2>
                 <div class="container__campo__formulario">
                     <label for="nome">Nome do gasto</label>
-                    <input type="text" name="nome" required />
+                    <input type="text" name="nome" required id="nomeGasto" />
                 </div>
 
                 <div class="container__campo__formulario">
                     <label for="custo">Gasto Total</label>
-                    <input type="number" name="custo" required />
+                    <input
+                        type="number"
+                        name="custo"
+                        required
+                        id="valorGasto"
+                    />
                 </div>
 
                 <div class="container__campo__formulario">
                     <label for="loja">Loja</label>
-                    <input type="text" name="loja" required />
+                    <input type="text" name="loja" required id="lojaGasto" />
                 </div>
 
                 <div class="container__campo__formulario">
                     <label for="data">Data</label>
-                    <input type="date" name="data" required />
+                    <input type="date" name="data" required id="dataGasto" />
                 </div>
 
                 <div class="container__campo__formulario">
                     <label for="tipo">Tipo do gasto</label>
-                    <select name="tipo">
+                    <select name="tipo" id="tipoGasto">
                         <option value="producao">Produção</option>
                         <option value="mercadoria">Mercadoria</option>
                         <option value="ferramenta">Ferramenta</option>
@@ -74,5 +79,7 @@
             </form>
         </div>
         <script src="./scripts/main.js"></script>
+        <script type="module" src="./scripts/conexao.js"></script>
+        <script type="module" src="./scripts/criaGastos.js"></script>
     </body>
 </html>
