@@ -29,7 +29,28 @@ async function listaGastos() {
     return conexaoConvertida;
 }
 
+async function removeGastos(id) {
+    const conexao = await fetch("https://api-montresor.onrender.com/gastos", {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+            id: id,
+        }),
+    });
+
+    if (!conexao.ok) {
+        throw new Error("Não foi possível remover!");
+    }
+
+    console.log(conexao.status);
+    const conexaoConvertida = await conexao.json();
+    return conexaoConvertida;
+}
+
 export const conectaApi = {
     listaGastos,
     criaGasto,
+    removeGastos,
 };

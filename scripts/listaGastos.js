@@ -13,10 +13,12 @@ async function mostrarGastos() {
                     element.valor,
                     element.loja,
                     element.data,
-                    element.tipo
+                    element.tipo,
+                    element.id
                 )
             );
         });
+        // adiciona os ícones nos card após serem criados e possiblita a animação de expandir e fechar
         const divCards = document.querySelectorAll("[data-card]");
 
         divCards.forEach((divCard) => {
@@ -32,6 +34,20 @@ async function mostrarGastos() {
                 divCard.classList.toggle("card__expandido");
             });
         });
+
+        // seleciona o icone do botão delete
+        const botoesDelete = document.querySelectorAll("[data-botaoDeleta]");
+
+        botoesDelete.forEach((botaoDelete) => {
+            botaoDelete.addEventListener("click", async () => {
+                const cardElement =
+                    botaoDelete.parentNode.parentNode.parentNode;
+                const cardId = cardElement.getAttribute("data-id");
+                await conectaApi.removeGastos(cardId);
+                alert("Gasto removido!");
+                window.location.reload();
+            });
+        });
     } catch {
         timelineGastos.innerHTML = `<h2>Não foi possível carregar a lista de vídeos!</h2>`;
     }
@@ -39,11 +55,11 @@ async function mostrarGastos() {
 
 mostrarGastos();
 
-export default function constroiCard(gasto, valor, loja, data, tipo) {
+export default function constroiCard(gasto, valor, loja, data, tipo, id) {
     const card = document.createElement("div");
-
     card.className = "card__timeline";
     card.setAttribute("data-card", "");
+    card.setAttribute("data-id", id);
 
     card.innerHTML = `
     <div class="container__icone-titulo">
@@ -70,7 +86,7 @@ export default function constroiCard(gasto, valor, loja, data, tipo) {
             </div>
         </div>
         <div class="container__botoes" id="botoes-edit-delete">
-            <img class="botoes__card" src="./assets/lixeira.svg" />
+            <img data-botaoDeleta class="botoes__card" src="./assets/lixeira.svg" />
             <img class="botoes__card" src="./assets/edit.svg" />
         </div>
     </div>
