@@ -26,3 +26,5 @@ botaoNovoItem.addEventListener(
     "click",
     () => (window.location.href = "./new-item.html")
 );
+
+// declarando o elemento valor para que não dê erro

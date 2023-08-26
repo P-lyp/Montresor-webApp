@@ -2,6 +2,8 @@ import { conectaApi } from "./conexao.js";
 
 const timelineGastos = document.getElementById("listaGastos");
 
+const elementoValor = document.querySelector(".valor__info");
+
 async function mostrarGastos() {
     try {
         const listaApi = await conectaApi.listaGastos();
@@ -18,6 +20,7 @@ async function mostrarGastos() {
                 )
             );
         });
+        // - CRIAR FUNCAO E COLOCAR SOMENTE A CHAMADA AQUI
         // adiciona os ícones nos card após serem criados e possiblita a animação de expandir e fechar
         const divCards = document.querySelectorAll("[data-card]");
 
@@ -35,6 +38,7 @@ async function mostrarGastos() {
             });
         });
 
+        // - CRIAR FUNCAO E COLOCAR SOMENTE A CHAMADA AQUI
         // seleciona o icone do botão delete
         const botoesDelete = document.querySelectorAll("[data-botaoDeleta]");
 
@@ -48,6 +52,19 @@ async function mostrarGastos() {
                 window.location.reload();
             });
         });
+
+        // - CRIAR FUNCAO E COLOCAR SOMENTE A CHAMADA AQUI
+        //pega os valores de preço em cada card
+        const cardPrecos = document.querySelectorAll("[data-preco]");
+        var somaGastos = 0;
+        cardPrecos.forEach((card) => {
+            var gasto = parseFloat(
+                card.innerText.replace("R$", "").replace(",", ".")
+            );
+
+            somaGastos += gasto;
+        });
+        elementoValor.innerText = `R$ ${somaGastos}`;
     } catch {
         timelineGastos.innerHTML = `<h2>Não foi possível carregar a lista de vídeos!</h2>`;
     }
@@ -77,7 +94,7 @@ export default function constroiCard(gasto, valor, loja, data, tipo, id) {
     <div class="container__info-botoes">
         <div class="container__preco-loja">
             <div class="card__preco">
-                <p>${valor}</p>
+                <p data-preco>R$ ${valor}</p>
             </div>
 
             <div class="card__loja-data">
