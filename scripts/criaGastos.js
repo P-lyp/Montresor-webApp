@@ -1,10 +1,10 @@
-import { conectaApi } from "./conexao.js";
+import { conexoesApi } from "./conexao.js";
 
 const formulario = document.getElementById("form");
 
-formulario.addEventListener("submit", (evento) => criarGasto(evento));
+formulario.addEventListener("submit", (evento) => cadastrarGasto(evento));
 
-async function criarGasto(evento) {
+async function cadastrarGasto(evento) {
     evento.preventDefault();
 
     const nomeGasto = document.getElementById("nomeGasto").value;
@@ -13,14 +13,8 @@ async function criarGasto(evento) {
     const dataGasto = document.getElementById("dataGasto").value;
     const tipoGasto = document.getElementById("tipoGasto").value;
 
-    console.log(nomeGasto);
-    console.log(valorGasto);
-    console.log(lojaGasto);
-    console.log(dataGasto);
-    console.log(tipoGasto);
-
     try {
-        await conectaApi.criaGasto(
+        await conexoesApi.criaGasto(
             nomeGasto,
             valorGasto,
             lojaGasto,

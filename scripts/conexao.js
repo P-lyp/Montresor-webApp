@@ -22,7 +22,7 @@ async function criaGasto(gasto, valor, loja, data, tipo) {
     return conexaoConvertida;
 }
 
-async function listaGastos() {
+async function adquireGastos() {
     const conexao = await fetch("https://api-montresor.onrender.com/gastos");
     console.log(conexao.status);
     const conexaoConvertida = await conexao.json();
@@ -49,8 +49,8 @@ async function removeGastos(id) {
     return conexaoConvertida;
 }
 
-export const conectaApi = {
-    listaGastos,
+export const conexoesApi = {
+    adquireGastos,
     criaGasto,
     removeGastos,
 };

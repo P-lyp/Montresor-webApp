@@ -27,32 +27,42 @@
     align-items: center;
     box-shadow: 3px 7px 4px 0px rgba(0, 0, 0, 0.3);
     max-height: 6vh;
+    overflow: hidden;
 }
 
 /* ADICIONAR QUANDO CLICADO NO CARD */
 .card__expandido {
-    transition: max-height 0.1s ease-out;
-    height: 11.5vh;
-    align-items: flex-start;
-    max-height: 11.5vh;
+}
+
+/* Animação de fade in para o botão delete */
+.fadeIn {
+    animation: fadeInAnimation 0.45s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de slide in da direita para a esquerda */
+.slideIn {
+    animation: slideInAnimation 0.4s ease forwards;
+
+    transform: translateX(100%);
+}
+
+@keyframes slideInAnimation {
+    to {
+        transform: translateX(0);
+    }
 }
 
 .botoes__card {
     width: 8vw;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(312deg)
         brightness(109%) contrast(109%);
-}
-
-.container__botoes {
-    margin-top: 5vw;
-    display: flex;
-    justify-content: space-between;
-    gap: 2vw;
-}
-
-.container__info-botoes {
-    display: flex;
-    flex-direction: column;
 }
 
 .icone__timeline {
