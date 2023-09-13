@@ -86,7 +86,7 @@ function calculaTotalInvestido() {
 
         somaGastos += gasto;
     });
-    elementoValor.innerText = `R$ ${somaGastos}`;
+    elementoValor.innerText = `R$ ${somaGastos.toFixed(2)}`;
 }
 
 function funcionamentoBtnDelete() {
@@ -111,7 +111,7 @@ function addAnimacaoBtn() {
             divCard.querySelector(".container__botoes");
         const btnDeleteIcon = divCard.querySelector("[data-botaoDeleta]");
 
-        const divPrecoLoja = document.querySelector(".container__info");
+        const divPrecoLoja = divCard.querySelector(".container__info");
 
         divBotoesEditaDelete.style.display = "none";
 
