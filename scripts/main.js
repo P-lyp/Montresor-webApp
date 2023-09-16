@@ -1,3 +1,10 @@
+const botaoMenuGeral = document.querySelector("[data-menuGeral]");
+const botaoMenuDesejos = document.querySelector("[data-menuDesejos]");
+const botaoMenuPedidos = document.querySelector("[data-menuPedidos]");
+
+const botaoLogo = document.querySelector("[data-botaoLogo]");
+const botaoNovoItem = document.querySelector("[data-botaoNovoItem]");
+
 redirecionamentosPaginas();
 
 // animacao para menu hamburguer
@@ -5,17 +12,28 @@ animacaoMenuHamburguer();
 
 function redirecionamentosPaginas() {
     //redirecionar para pag principal ao apertar na logo
-    var botaoLogo = document.getElementById("botao-logo");
     botaoLogo.addEventListener(
         "click",
         () => (window.location.href = "./index.html")
     );
 
     //redirecionar botao + para outra pagina
-    var botaoNovoItem = document.getElementById("botaoNovoItem");
     botaoNovoItem.addEventListener(
         "click",
         () => (window.location.href = "./new-item.html")
+    );
+
+    //menu
+    botaoMenuGeral.addEventListener("click", () => (window.location.href = ""));
+
+    botaoMenuDesejos.addEventListener(
+        "click",
+        () => (window.location.href = "")
+    );
+
+    botaoMenuPedidos.addEventListener(
+        "click",
+        () => (window.location.href = "./sales.html")
     );
 }
 
