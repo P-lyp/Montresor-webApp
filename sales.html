@@ -4,10 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pedidos feitos</title>
+        <link rel="stylesheet" href="./styles/style.css" />
     </head>
     <body>
         <header class="container__header">
-            <div class="container__logo" id="botao-logo">
+            <div class="container__logo" data-botaoLogo>
                 <p class="texto__logo">MonTresor</p>
             </div>
             <div class="container__menu__hamburguer">
@@ -17,19 +18,27 @@
                     alt="menu-hamburguer"
                 />
                 <div class="menu__hamburguer">
-                    <p class="menu__hamburguer__texto">Geral</p>
+                    <p class="menu__hamburguer__texto" data-menuGeral>Geral</p>
                     <img
                         class="menu__hamburguer__linha"
                         src="./assets/linha-horizontal-mobile.svg"
                     />
-                    <p class="menu__hamburguer__texto">Lista de Desejos</p>
+                    <p class="menu__hamburguer__texto" data-menuDesejos>
+                        Lista de Desejos
+                    </p>
                     <img
                         class="menu__hamburguer__linha"
                         src="./assets/linha-horizontal-mobile.svg"
                     />
-                    <p class="menu__hamburguer__texto">Lista de Pedidos</p>
+                    <p class="menu__hamburguer__texto" data-menuPedidos>
+                        Lista de Pedidos
+                    </p>
                 </div>
             </div>
         </header>
+
+        <!-- SVG COM ICON PARA  -->
+
+        <script src="./scripts/main.js"></script>
     </body>
 </html>

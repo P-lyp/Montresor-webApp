@@ -5,10 +5,11 @@ const botaoMenuPedidos = document.querySelector("[data-menuPedidos]");
 const botaoLogo = document.querySelector("[data-botaoLogo]");
 const botaoNovoItem = document.querySelector("[data-botaoNovoItem]");
 
+animacaoMenuHamburguer();
+
 redirecionamentosPaginas();
 
 // animacao para menu hamburguer
-animacaoMenuHamburguer();
 
 function redirecionamentosPaginas() {
     //redirecionar para pag principal ao apertar na logo
@@ -24,12 +25,12 @@ function redirecionamentosPaginas() {
     );
 
     //menu
-    botaoMenuGeral.addEventListener("click", () => (window.location.href = ""));
+    // botaoMenuGeral.addEventListener("click", () => (window.location.href = ""));
 
-    botaoMenuDesejos.addEventListener(
-        "click",
-        () => (window.location.href = "")
-    );
+    // botaoMenuDesejos.addEventListener(
+    //     "click",
+    //     () => (window.location.href = "")
+    // );
 
     botaoMenuPedidos.addEventListener(
         "click",
