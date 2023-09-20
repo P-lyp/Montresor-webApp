@@ -2,7 +2,7 @@
 @import url(./header.css);
 @import url(./index/infos.css);
 @import url(./index/timeline.css);
-@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Montserrat:wght@200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Montserrat:wght@100;200;300;400;500&display=swap");
 
 :root {
     --cor-principal: #4c2323;
@@ -13,12 +13,11 @@
 
     --fonte-logo: "Licorice", cursive;
     --fonte-principal: "Montserrat", sans-serif;
-    --fonte-weight-padrao: 200;
 }
 
 body {
     background-color: var(--cor-secundaria);
     color: white;
     font-family: var(--fonte-principal);
-    font-weight: 200;
+    font-weight: 100;
 }

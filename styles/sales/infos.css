@@ -1,0 +1,23 @@
+.info__sales {
+    margin-top: 6vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.container__texto__valor__sales {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 100;
+}
+
+.container__texto__sales {
+    margin-bottom: 1vh;
+}
+
+.container__valor__sales {
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-bottom: 1vh;
+}

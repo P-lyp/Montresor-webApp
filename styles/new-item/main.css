@@ -2,7 +2,7 @@
     font-size: 8vw;
     margin-top: 5%;
     margin-bottom: 10%;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .container__formulario {
@@ -48,7 +48,7 @@ select {
     text-align: center;
     color: var(--cor-secundaria-fonte);
     background: var(--cor-terciaria);
-    font-weight: 200;
+    font-weight: 100;
 }
 
 button {
@@ -57,7 +57,7 @@ button {
     background: var(--cor-secundaria);
     color: var(--cor-principal-fonte);
     border-radius: 12vw;
-    font-weight: 200;
+    font-weight: 100;
     width: 80vw;
     height: 7vh;
     font-family: Montserrat;
