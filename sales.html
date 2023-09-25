@@ -6,6 +6,7 @@
         <title>Pedidos feitos</title>
         <link rel="stylesheet" href="./styles/style.css" />
         <link rel="stylesheet" href="./styles/sales/infos.css" />
+        <link rel="stylesheet" href="./styles/sales/timeline.css" />
     </head>
     <body>
         <header class="container__header">
@@ -59,18 +60,21 @@
                     </div>
                 </div>
             </div>
+        </section>
             <!-- FIM INFOS -->
-
+        <section>
             <div class="container__lista__pedidos">
                 <div class="container__card__pedido">
                     <div class="categoria__card">
                         <p class="categoria__card__data">02/07</p>
-                        <p class="categoria__card__status">Em andamento</p>
+                        <p class="categoria__card__status status__andamento">
+                            Em andamento
+                        </p>
                     </div>
 
                     <div class="categoria__card card__background__superior">
                         <p class="categoria__card__nome">Jorgin</p>
-                        <p class="categoria__card__valor">R$ 0,00</p>
+                        <p class="categoria__card__valor">R$ 12,00</p>
                     </div>
                     <div class="categoria__card card__background__inferior">
                         <p class="categoria__card__descricao">
@@ -83,8 +87,39 @@
                         <!-- ICONE FINALIZAR PEDIDO IRÁ AQUI -->
                     </div>
                 </div>
+
+            <div class="container__card__pedido">
+                <div class="categoria__card">
+                    <p class="categoria__card__data">01/07</p>
+                    <p class="categoria__card__status status__entregue">
+                        Entregue
+                    </p>
+                </div>
+
+                <div class="categoria__card card__background__superior">
+                    <p class="categoria__card__nome">Samanta</p>
+                    <p class="categoria__card__valor">R$ 0,00</p>
+                </div>
+                <div class="categoria__card card__background__inferior">
+                    <p class="categoria__card__descricao">
+                        1 polaroid de mesa
+                    </p>
+                    <img
+                        class="categoria__card__icone"
+                        src="./assets/icone-remover.svg"
+                    />
+                    <!-- ICONE FINALIZAR PEDIDO IRÁ AQUI -->
+                </div>
             </div>
+        </div>
+    
+
+            <div class="container__icone__mais">
+                <button class="btn__icone__mais" data-botaoNovoItem>
+                    <img class="icone__mais" src="./assets/icone-mais.svg" />
+                </button>
         </section>
+        
 
         <script src="./scripts/main.js"></script>
     </body>

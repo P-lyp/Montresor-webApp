@@ -1,0 +1,79 @@
+.container__lista__pedidos {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.container__card__pedido {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw;
+    font-weight: 200;
+    margin-bottom: 3vh;
+}
+
+.categoria__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoria__card__data {
+    font-size: 0.8rem;
+    padding-left: 3vw;
+    padding-bottom: 0.5rem;
+    color: #c2c2c2;
+}
+
+.categoria__card__status {
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    padding-right: 3vw;
+}
+
+.status__andamento {
+    color: #c64a4a;
+}
+
+.status__entregue {
+    color: #4b9304;
+}
+
+.card__background__superior {
+    background-color: #5e5e5e;
+    padding: 4vw;
+    border-radius: 1rem 1rem 0 0;
+    background: #5e5e5e;
+    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.categoria__card__nome {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.categoria__card__valor {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.card__background__inferior {
+    background-color: #232323;
+    border-radius: 0 0 1rem 1rem;
+    padding: 2.5vw 4vw 4vw 4vw;
+    align-items: center;
+    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+.categoria__card__descricao {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.categoria__card__icone {
+    width: 8vw;
+    filter: drop-shadow(1px 1px 4px #000000);
+}
