@@ -1,9 +1,16 @@
+//menu hamburguer e opcoes
 const botaoMenuGeral = document.querySelector("[data-menuGeral]");
 const botaoMenuDesejos = document.querySelector("[data-menuDesejos]");
 const botaoMenuPedidos = document.querySelector("[data-menuPedidos]");
 
+// logo montresor
 const botaoLogo = document.querySelector("[data-botaoLogo]");
+
+// tela cadastro item
 const botaoNovoItem = document.querySelector("[data-botaoNovoItem]");
+
+//tela cadastro pedido
+const botaoNovoPedido = document.querySelector("[data-botaoNovoPedido]");
 
 animacaoMenuHamburguer();
 
@@ -18,23 +25,35 @@ function redirecionamentosPaginas() {
         () => (window.location.href = "./index.html")
     );
 
-    //redirecionar botao + para outra pagina
-    botaoNovoItem.addEventListener(
+    if (window.location.pathname == "/order.html") {
+        //botao novo pedido que redireciona para pagina de cadastro
+        botaoNovoPedido.addEventListener(
+            "click",
+            () => (window.location.href = "./new-order.html")
+        );
+    }
+
+    if (window.location.pathname == "/index.html") {
+        // botao novo item que redireciona para pagina de cadastro
+        botaoNovoItem.addEventListener(
+            "click",
+            () => (window.location.href = "./new-item.html")
+        );
+    }
+
+    //menu hamburguer - opção geral
+    botaoMenuGeral.addEventListener("click", () => (window.location.href = ""));
+
+    //menu hamburguer - opção lista de desejos
+    botaoMenuDesejos.addEventListener(
         "click",
-        () => (window.location.href = "./new-item.html")
+        () => (window.location.href = "")
     );
 
-    //menu
-    // botaoMenuGeral.addEventListener("click", () => (window.location.href = ""));
-
-    // botaoMenuDesejos.addEventListener(
-    //     "click",
-    //     () => (window.location.href = "")
-    // );
-
+    //menu hamburguer - opção lista de pedidos
     botaoMenuPedidos.addEventListener(
         "click",
-        () => (window.location.href = "./sales.html")
+        () => (window.location.href = "./order.html")
     );
 }
 

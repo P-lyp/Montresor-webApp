@@ -1,4 +1,4 @@
-.info__sales {
+.info__order {
     margin-top: 6vh;
     display: flex;
     align-items: center;
@@ -6,17 +6,17 @@
     gap: 5vh;
 }
 
-.container__texto__valor__sales {
+.container__texto__valor__order {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 100;
 }
 
-.container__texto__sales {
+.container__texto__order {
     margin-bottom: 1vh;
 }
 
-.container__valor__sales {
+.container__valor__order {
     font-weight: 400;
     font-size: 2.2rem;
     margin-bottom: 1vh;

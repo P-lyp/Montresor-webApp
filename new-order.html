@@ -42,44 +42,28 @@
 
         <div class="container__formulario">
             <form id="form">
-                <h2 class="cadastro__titulo">Cadastro de gasto</h2>
+                <h2 class="cadastro__titulo">Cadastro de pedido</h2>
                 <div class="container__campo__formulario">
-                    <label for="nomeGasto">Nome do gasto</label>
-                    <input type="text" required id="nomeGasto" />
+                    <label for="nomeCliente">Nome do cliente</label>
+                    <input type="text" required id="nomeCliente" />
                 </div>
 
                 <div class="container__campo__formulario">
-                    <label for="valorGasto">Gasto Total</label>
-                    <input type="number" required id="valorGasto" step=".01" />
+                    <label for="valorPedido">Valor do Pedido</label>
+                    <input type="number" required id="valorPedido" step=".01" />
                 </div>
 
                 <div class="container__campo__formulario">
-                    <label for="lojaGasto">Loja</label>
-                    <input type="text" required id="lojaGasto" />
-                </div>
-
-                <div class="container__campo__formulario">
-                    <label for="dataGasto">Data</label>
-                    <input type="date" required id="dataGasto" />
-                </div>
-
-                <div class="container__campo__formulario">
-                    <label for="tipoGasto">Tipo do gasto</label>
-                    <select id="tipoGasto">
-                        <option value="producao">Produção</option>
-                        <option value="mercadoria">Mercadoria</option>
-                        <option value="ferramenta">Ferramenta</option>
-                    </select>
+                    <label for="descricaoPedido">Descrição do Pedido</label>
+                    <input type="text" required id="descricaoPedido" />
                 </div>
 
                 <div class="container__botao__submit">
-                    <button type="submit">Cadastrar Compra</button>
+                    <button type="submit">Cadastrar Pedido</button>
                 </div>
             </form>
         </div>
 
-        <script type="module" src="./scripts/conexao.js"></script>
-        <script type="module" src="./scripts/criaGastos.js"></script>
         <script src="./scripts/main.js"></script>
     </body>
 </html>
