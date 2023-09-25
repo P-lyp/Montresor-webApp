@@ -68,7 +68,7 @@ export default function constroiCard(gasto, valor, loja, data, tipo, id) {
     </div>
 
     <div class="container__botoes" id="botoes-edit-delete">
-            <img data-botaoDeleta class="botoes__card" src="./assets/lixeira.svg" />
+            <img data-botaoDeleta class="botoes__card" src="./assets/icone-remover.svg" />
         </div>
 </div>`;
 

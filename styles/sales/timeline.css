@@ -77,3 +77,9 @@
     width: 8vw;
     filter: drop-shadow(1px 1px 4px #000000);
 }
+
+.container__icone__maisPedido {
+    display: flex;
+    justify-content: center;
+    margin-left: 3.5vw;
+}
