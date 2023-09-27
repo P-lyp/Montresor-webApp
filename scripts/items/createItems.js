@@ -1,4 +1,4 @@
-import { conexoesApi } from "./conexao.js";
+import { conexoesApi } from "./connectItems.js";
 
 const formulario = document.getElementById("form");
 
