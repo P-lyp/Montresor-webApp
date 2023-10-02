@@ -58,6 +58,16 @@
                     <input type="text" required id="descricaoPedido" />
                 </div>
 
+                <div class="container__campo__formulario">
+                    <label for="dataInicio">Data do pedido</label>
+                    <input type="date" required id="dataInicio" />
+                </div>
+
+                <div class="container__campo__formulario">
+                    <label for="finalizado">Finalizado?</label>
+                    <input type="checkbox" id="finalizado" />
+                </div>
+
                 <div class="container__botao__submit">
                     <button type="submit">Cadastrar Pedido</button>
                 </div>
@@ -65,5 +75,6 @@
         </div>
 
         <script src="./scripts/main.js"></script>
+        <script type="module" src="./scripts/orders/createOrders.js"></script>
     </body>
 </html>

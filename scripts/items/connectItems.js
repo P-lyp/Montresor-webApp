@@ -49,7 +49,7 @@ async function removeGastos(id) {
     return conexaoConvertida;
 }
 
-export const conexoesApi = {
+export const conexoesItem = {
     adquireGastos,
     criaGasto,
     removeGastos,

@@ -1,4 +1,4 @@
-import { conexoesApi } from "./connectItems.js";
+import { conexoesItem } from "./connectItems.js";
 
 const timelineGastos = document.getElementById("listaGastos");
 
@@ -6,7 +6,7 @@ const elementoValor = document.querySelector(".valor__info");
 
 async function carregarGastos() {
     try {
-        const listaApi = await conexoesApi.adquireGastos();
+        const listaApi = await conexoesItem.adquireGastos();
 
         listaApi.forEach((element) => {
             timelineGastos.appendChild(
@@ -96,7 +96,7 @@ function funcionamentoBtnDelete() {
         botaoDelete.addEventListener("click", async () => {
             const cardElement = botaoDelete.parentNode.parentNode;
             const cardId = cardElement.getAttribute("data-id");
-            await conexoesApi.removeGastos(cardId);
+            await conexoesItem.removeGastos(cardId);
             alert("Gasto removido!");
             window.location.reload();
         });

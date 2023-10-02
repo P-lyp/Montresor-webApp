@@ -1,4 +1,4 @@
-import { conexoesApi } from "./connectItems.js";
+import { conexoesItem } from "./connectItems.js";
 
 const formulario = document.getElementById("form");
 
@@ -14,7 +14,7 @@ async function cadastrarGasto(evento) {
     const tipoGasto = document.getElementById("tipoGasto").value;
 
     try {
-        await conexoesApi.criaGasto(
+        await conexoesItem.criaGasto(
             nomeGasto,
             valorGasto,
             lojaGasto,
