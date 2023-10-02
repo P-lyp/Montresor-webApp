@@ -2,6 +2,17 @@ import { conexoesOrder } from "./connectOrders.js";
 
 const timelinePedidos = document.getElementById("listaPedidos");
 
+const elementoPedidosAndamento = document.getElementById(
+    "num_pedidosAndamento"
+);
+
+const elementoPedidosFinalizado = document.getElementById(
+    "num_pedidosFinalizado"
+);
+
+var quantidadeFinalizado = 0;
+var quantidadeAndamento = 0;
+
 async function carregarPedidos() {
     try {
         const listaApi = await conexoesOrder.adquirePedidos();
@@ -19,10 +30,29 @@ async function carregarPedidos() {
             );
         });
 
+        funcionamentoBtnDelete();
+
+        elementoPedidosFinalizado.innerText = quantidadeFinalizado;
+        elementoPedidosAndamento.innerText = quantidadeAndamento;
+
         // espaco para funções utilizadas nos cards
     } catch (e) {
         timelinePedidos.innerHTML = `<h2>Não foi possível carregar a lista de pedidos!</h2>`;
     }
+}
+
+function funcionamentoBtnDelete() {
+    const botoesDelete = document.querySelectorAll("[data-botaoDeleta]");
+
+    botoesDelete.forEach((botaoDelete) => {
+        botaoDelete.addEventListener("click", async () => {
+            const cardElement = botaoDelete.parentNode.parentNode;
+            const cardId = cardElement.getAttribute("data-id");
+            await conexoesOrder.removePedido(cardId);
+            alert("Pedido removido com sucesso!");
+            window.location.reload();
+        });
+    });
 }
 
 carregarPedidos();
@@ -43,15 +73,20 @@ export default function constroiCardPedido(
     var statusPedido;
     var dataAtributteStatus;
     var iconeStatus;
+    var dataBotao;
 
     if (finalizado == false) {
         dataAtributteStatus = "status__andamento";
         statusPedido = "Em andamento";
         iconeStatus = "pedido-finalizado";
+        dataBotao = "botaoFinalizar";
+        quantidadeAndamento++;
     } else {
         dataAtributteStatus = "status__entregue";
         statusPedido = "Entregue";
         iconeStatus = "icone-remover";
+        dataBotao = "botaoDeleta";
+        quantidadeFinalizado++;
     }
 
     card.innerHTML = `
@@ -71,6 +106,7 @@ export default function constroiCardPedido(
                             ${descricaoPedido}
                         </p>
                         <img
+                            data-${dataBotao} 
                             class="categoria__card__icone"
                             src="./assets/${iconeStatus}.svg"
                         />
