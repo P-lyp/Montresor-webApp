@@ -29,7 +29,7 @@ async function carregarGastos() {
         //seleciona os valores de preço em cada card e soma eles para exibir
         calculaTotalInvestido();
     } catch {
-        timelineGastos.innerHTML = `<h2>Não foi possível carregar a lista de vídeos!</h2>`;
+        timelineGastos.innerHTML = `<h2>Não foi possível carregar a lista de gastos!</h2>`;
     }
 }
 

@@ -61,10 +61,11 @@
                 </div>
             </div>
         </section>
-            <!-- FIM INFOS -->
+        <!-- FIM INFOS -->
         <section>
-            <div class="container__lista__pedidos">
-                <div class="container__card__pedido">
+            <section class="container__lista__pedidos" id="listaPedidos">
+
+                <!-- <div class="container__card__pedido">
                     <div class="categoria__card">
                         <p class="categoria__card__data">02/07</p>
                         <p class="categoria__card__status status__andamento">
@@ -84,43 +85,44 @@
                             class="categoria__card__icone"
                             src="./assets/pedido-finalizado.svg"
                         />
-                        <!-- ICONE FINALIZAR PEDIDO IRÁ AQUI -->
                     </div>
                 </div>
 
-            <div class="container__card__pedido">
-                <div class="categoria__card">
-                    <p class="categoria__card__data">01/07</p>
-                    <p class="categoria__card__status status__entregue">
-                        Entregue
-                    </p>
-                </div>
+                <div class="container__card__pedido">
+                    <div class="categoria__card">
+                        <p class="categoria__card__data">01/07</p>
+                        <p class="categoria__card__status status__entregue">
+                            Entregue
+                        </p>
+                    </div>
 
-                <div class="categoria__card card__background__superior">
-                    <p class="categoria__card__nome">Samanta</p>
-                    <p class="categoria__card__valor">R$ 0,00</p>
-                </div>
-                <div class="categoria__card card__background__inferior">
-                    <p class="categoria__card__descricao">
-                        1 polaroid de mesa
-                    </p>
-                    <img
-                        class="categoria__card__icone"
-                        src="./assets/icone-remover.svg"
-                    />
-                    <!-- ICONE FINALIZAR PEDIDO IRÁ AQUI -->
-                </div>
-            </div>
-        </div>
-    
-
+                    <div class="categoria__card card__background__superior">
+                        <p class="categoria__card__nome">Samanta</p>
+                        <p class="categoria__card__valor">R$ 0,00</p>
+                    </div>
+                    <div class="categoria__card card__background__inferior">
+                        <p class="categoria__card__descricao">
+                            1 polaroid de mesa
+                        </p>
+                        <img
+                            class="categoria__card__icone"
+                            src="./assets/icone-remover.svg"
+                        />
+                    </div>
+                </div> -->
+            </section>
+            
             <div class="container__icone__maisPedido">
                 <button class="btn__icone__mais" data-botaoNovoPedido>
-                    <img class="icone__mais" src="./assets/icone-novoPedido.svg" />
+                    <img
+                        class="icone__mais"
+                        src="./assets/icone-novoPedido.svg"
+                    />
                 </button>
+            
         </section>
-        
 
         <script src="./scripts/main.js"></script>
+        <script type="module" src="./scripts/orders/showOrders.js"></script>
     </body>
 </html>

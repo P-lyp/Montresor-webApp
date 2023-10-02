@@ -28,7 +28,7 @@ async function criaPedido(
     return conexaoConvertida;
 }
 
-async function adquirePedido() {
+async function adquirePedidos() {
     const conexao = await fetch("https://api-montresor.onrender.com/pedidos");
     console.log(conexao.status);
     const conexaoConvertida = await conexao.json();
@@ -56,7 +56,7 @@ async function removePedido(id) {
 }
 
 export const conexoesOrder = {
-    adquirePedido,
+    adquirePedidos,
     criaPedido,
     removePedido,
 };
