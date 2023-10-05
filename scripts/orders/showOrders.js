@@ -18,16 +18,18 @@ async function carregarPedidos() {
                 )
             );
         });
+        atualizaStatus();
 
         // espaco para funções utilizadas nos cards
     } catch (e) {
+        console.log(e);
         timelinePedidos.innerHTML = `<h2>Não foi possível carregar a lista de pedidos!</h2>`;
     }
 }
 
 carregarPedidos();
 
-export default function constroiCardPedido(
+function constroiCardPedido(
     nomeCliente,
     valorPedido,
     descricaoPedido,
@@ -78,4 +80,16 @@ export default function constroiCardPedido(
     `;
 
     return card;
+}
+
+// pra atualizar o status vai ter que fazer um requisição de update mudando o valor de finalizado no bd
+
+function atualizaStatus() {
+    var listaCards = document.querySelectorAll("[data-card]");
+
+    listaCards.forEach((card) => {
+        card.addEventListener("click", () => {
+            console.log("teste");
+        });
+    });
 }
