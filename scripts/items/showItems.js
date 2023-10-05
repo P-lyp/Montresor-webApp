@@ -97,7 +97,7 @@ function funcionamentoBtnDelete() {
             const cardElement = botaoDelete.parentNode.parentNode;
             const cardId = cardElement.getAttribute("data-id");
             await conexoesItem.removeGastos(cardId);
-            alert("Gasto removido!");
+            alert("Gasto removido com sucesso!");
             window.location.reload();
         });
     });

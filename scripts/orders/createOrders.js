@@ -22,7 +22,7 @@ async function cadastrarPedido(evento) {
             finalizado
         );
 
-        window.location.href = "./new-item.html";
+        window.location.href = "./order.html";
     } catch (e) {
         alert(e);
     }
