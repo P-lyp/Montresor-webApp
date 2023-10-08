@@ -1,6 +1,6 @@
 async function criaGasto(gasto, valor, loja, data, tipo) {
     const conexao = await fetch("https://api-montresor.onrender.com/gastos", {
-        method: "PUT",
+        method: "POST",
         headers: {
             "Content-type": "application/json",
         },

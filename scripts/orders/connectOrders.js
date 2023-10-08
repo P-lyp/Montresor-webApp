@@ -6,7 +6,7 @@ async function criaPedido(
     finalizado
 ) {
     const conexao = await fetch("https://api-montresor.onrender.com/pedidos", {
-        method: "PUT",
+        method: "POST",
         headers: {
             "Content-type": "application/json",
         },
@@ -55,8 +55,30 @@ async function removePedido(id) {
     return conexaoConvertida;
 }
 
+async function alteraStatusFinalizado(id) {
+    console.log(id);
+    const conexao = await fetch("https://api-montresor.onrender.com/pedidos", {
+        method: "PUT",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+            id: id,
+        }),
+    });
+
+    if (!conexao.ok) {
+        throw new Error("Não foi possível finalizar o pedido!");
+    }
+
+    console.log(conexao.status);
+    const conexaoConvertida = await conexao.json();
+    return conexaoConvertida;
+}
+
 export const conexoesOrder = {
     adquirePedidos,
     criaPedido,
     removePedido,
+    alteraStatusFinalizado,
 };

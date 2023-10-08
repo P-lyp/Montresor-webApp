@@ -29,7 +29,7 @@ async function carregarPedidos() {
                 )
             );
         });
-        atualizaStatus();
+        finalizaPedido();
 
         funcionamentoBtnDelete();
 
@@ -120,12 +120,20 @@ function constroiCardPedido(
 
 // pra atualizar o status vai ter que fazer um requisição de update mudando o valor de finalizado no bd
 
-function atualizaStatus() {
-    var listaCards = document.querySelectorAll("[data-card]");
+function finalizaPedido() {
+    const botaoAtualizar = document.querySelectorAll("[data-botaoFinalizar]");
 
-    listaCards.forEach((card) => {
-        card.addEventListener("click", () => {
-            console.log("teste");
+    botaoAtualizar.forEach((card) => {
+        card.addEventListener("click", async () => {
+            try {
+                await conexoesOrder.alteraStatusFinalizado(
+                    card.parentNode.parentNode.getAttribute("data-id")
+                );
+                alert("Pedido finalizado!");
+                window.location.reload();
+            } catch (e) {
+                alert(e);
+            }
         });
     });
 }
